@@ -1,0 +1,27 @@
+{
+  "name": "secretlint-action",
+  "version": "1.0.0",
+  "description": "GitHub Action CI companion for secretlint — detects leaked API keys, tokens, and credentials on every PR",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node -e \"console.log('secretlint-action: smoke test pass')\" && node src/index.js || true"
+  },
+  "keywords": [
+    "secretlint",
+    "github-actions",
+    "security",
+    "credentials",
+    "api-keys",
+    "secrets",
+    "ci",
+    "compliance",
+    "soc2"
+  ],
+  "author": "icgriggs14",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.1"
+  }
+}

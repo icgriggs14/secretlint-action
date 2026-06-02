@@ -1,0 +1,39 @@
+name: 'secretlint-action'
+description: 'GitHub Action CI companion for secretlint — detects leaked API keys, tokens, and credentials on every PR'
+author: 'icgriggs14'
+
+branding:
+  icon: 'shield'
+  color: 'red'
+
+inputs:
+  fail_on_error:
+    description: 'Fail CI if secrets/credentials are detected (default: true)'
+    required: false
+    default: 'true'
+  paths:
+    description: 'Glob pattern for files to scan (default: all files)'
+    required: false
+    default: '**/*'
+  config:
+    description: 'Path to .secretlintrc config file (optional)'
+    required: false
+    default: ''
+  github_token:
+    description: 'GitHub token for posting PR comments'
+    required: false
+    default: '${{ github.token }}'
+  working_directory:
+    description: 'Directory to run secretlint in (default: repo root)'
+    required: false
+    default: '.'
+
+outputs:
+  finding_count:
+    description: 'Total number of credential/secret findings'
+  passed:
+    description: 'true if no secrets detected, false otherwise'
+
+runs:
+  using: 'node20'
+  main: 'src/index.js'
