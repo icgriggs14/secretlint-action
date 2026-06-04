@@ -4,6 +4,7 @@
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-secretlint--action-blue?logo=github)](https://github.com/marketplace/actions/secretlint-action)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/icgriggs14/secretlint-action?style=social)](https://github.com/icgriggs14/secretlint-action/stargazers)
 
 Stop credential leaks before they reach your main branch. `secretlint-action` runs [secretlint](https://github.com/secretlint/secretlint) on every PR, posts a structured findings summary as a PR comment, and fails CI if secrets are detected.
 
